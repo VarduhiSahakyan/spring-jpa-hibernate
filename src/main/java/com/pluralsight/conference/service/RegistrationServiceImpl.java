@@ -4,7 +4,7 @@ import com.pluralsight.conference.model.Course;
 import com.pluralsight.conference.model.Registration;
 import com.pluralsight.conference.model.RegistrationReport;
 import com.pluralsight.conference.repository.CourseRepository;
-import com.pluralsight.conference.repository.RegistrationRepositoryy;
+import com.pluralsight.conference.repository.RegistrationRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -15,7 +15,7 @@ import java.util.List;
 public class RegistrationServiceImpl implements RegistrationService {
 
     @Autowired
-    private RegistrationRepositoryy registrationRepository;
+    private RegistrationRepository registrationRepository;
 
     @Autowired
     private CourseRepository courseRepository;
@@ -47,7 +47,7 @@ public class RegistrationServiceImpl implements RegistrationService {
     @Override
     public List<RegistrationReport> findAllReports() {
 
-        return registrationRepository.findAllReports();
+        return registrationRepository.registrationReport();
     }
 
 }
