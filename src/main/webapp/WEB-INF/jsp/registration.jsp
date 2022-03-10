@@ -36,7 +36,7 @@
     </nav>
 
     <div class="container">
-        <div>
+        <%--@declare id="textinput1"--%><div>
             <h1>Registration</h1>
         </div>
 
