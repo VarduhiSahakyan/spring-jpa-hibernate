@@ -9,14 +9,15 @@ import javax.persistence.PersistenceContext;
 @Repository
 public class CourseRepositoryImpl implements CourseRepository {
 
+
     @PersistenceContext
-    private EntityManager entityManager;
+    private EntityManager em;
+
+
 
     @Override
     public Course save(Course course) {
-        entityManager.persist(course);
-
+        em.persist(course);
         return course;
     }
-
 }

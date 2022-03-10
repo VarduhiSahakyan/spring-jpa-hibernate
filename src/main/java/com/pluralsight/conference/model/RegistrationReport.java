@@ -4,12 +4,12 @@ public class RegistrationReport {
 
     private String name;
     private String courseName;
-    private String courseDescription;
+    private String curseDescription;
 
-    public RegistrationReport(String name, String courseName, String courseDescription) {
+    public RegistrationReport(String name, String courseName, String curseDescription) {
         this.name = name;
         this.courseName = courseName;
-        this.courseDescription = courseDescription;
+        this.curseDescription = curseDescription;
     }
 
     public String getName() {
@@ -28,11 +28,11 @@ public class RegistrationReport {
         this.courseName = courseName;
     }
 
-    public String getCourseDescription() {
-        return courseDescription;
+    public String getCurseDescription() {
+        return curseDescription;
     }
 
-    public void setCourseDescription(String courseDescription) {
-        this.courseDescription = courseDescription;
+    public void setCurseDescription(String curseDescription) {
+        this.curseDescription = curseDescription;
     }
 }

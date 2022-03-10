@@ -13,5 +13,6 @@ public interface RegistrationService {
 
     List<Registration> findAll();
 
+
     List<RegistrationReport> findAllReports();
 }

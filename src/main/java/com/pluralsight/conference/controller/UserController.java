@@ -1,6 +1,5 @@
 package com.pluralsight.conference.controller;
 
-import com.pluralsight.conference.model.Registration;
 import com.pluralsight.conference.model.User;
 import com.pluralsight.conference.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -14,9 +13,9 @@ public class UserController {
     private UserService userService;
 
     @GetMapping("/user")
-    public User getUser(@RequestParam(value = "firstname",defaultValue = "Varduhi") String firstname,
-                        @RequestParam(value = "lastname",defaultValue = "ahakyan") String lastname,
-                        @RequestParam(value = "age",defaultValue = "34") int age) {
+    public User getUser(@RequestParam(value = "firstname") String firstname,
+                        @RequestParam(value = "lastname") String lastname,
+                        @RequestParam(value = "age") int age) {
         User user = new User();
 
         user.setFirstname(firstname);

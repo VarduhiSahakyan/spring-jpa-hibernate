@@ -11,4 +11,5 @@ import java.util.List;
 public interface RegistrationRepository extends JpaRepository<Registration, Long> {
 
     List<RegistrationReport> registrationReport();
+    
 }

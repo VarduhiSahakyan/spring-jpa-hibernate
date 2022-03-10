@@ -29,7 +29,7 @@ public class RegistrationController {
     public @ResponseBody
     List<Registration>
     getRegistrations() {
-        List<Registration> registrations = registrationService.findAll();
+      List<Registration> registrations = registrationService.findAll();
         return registrations;
     }
 
@@ -44,7 +44,7 @@ public class RegistrationController {
     @PostMapping("registration")
     public String addRegistration(@Valid @ModelAttribute ("registration")
                                               Registration registration,
-                                  BindingResult result) {
+                                              BindingResult result) {
 
         if(result.hasErrors()) {
             System.out.println("There were errors");
