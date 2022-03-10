@@ -25,13 +25,15 @@ public class RegistrationServiceImpl implements RegistrationService {
     @Transactional
     public Registration addRegistration(Registration registration) {
         registration = registrationRepository.save(registration);
+        if (registration.getId() == null) {
 
-        Course course = new Course();
-        course.setName("Intro");
-        course.setDescription("Every attendee must cople the intro");
-        course.setRegistration(registration);
+            Course course = new Course();
+            course.setName("Intro");
+            course.setDescription("Every attendee must cople the intro");
+            course.setRegistration(registration);
 
-        courseRepository.save(course);
+            courseRepository.save(course);
+        }
 
         return registration;
     }

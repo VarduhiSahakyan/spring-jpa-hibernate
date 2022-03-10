@@ -31,11 +31,7 @@ public class RegistrationRepositoryImpl implements RegistrationRepositoryy {
 
     @Override
     public List<RegistrationReport> findAllReports() {
-
-        List<RegistrationReport> registrationReports =
-                        em.
-                        createNamedQuery(Registration.REGISTRATION_REPORT).
-                        getResultList();
+        List<RegistrationReport> registrationReports = em.createNamedQuery(Registration.REGISTRATION_REPORT).getResultList();
         return registrationReports;
     }
 }
