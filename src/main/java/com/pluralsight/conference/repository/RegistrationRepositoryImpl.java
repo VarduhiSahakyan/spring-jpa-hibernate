@@ -31,11 +31,11 @@ public class RegistrationRepositoryImpl implements RegistrationRepositoryy {
 
     @Override
     public List<RegistrationReport> findAllReports() {
-        String jpql = "Select new com.pluralsight.conference.model.RegistrationReport " +
-                "(r.name, c.name, c.description) " +
-                " from Registration r, Course  c " +
-                " where r.id = c.registration.id ";
-        List<RegistrationReport> registrationReports = em.createQuery(jpql).getResultList();
+
+        List<RegistrationReport> registrationReports =
+                        em.
+                        createNamedQuery(Registration.REGISTRATION_REPORT).
+                        getResultList();
         return registrationReports;
     }
 }
